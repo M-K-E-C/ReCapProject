@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete;
+using Entities.Concrete;
 using System;
 
 namespace ConseleUI
@@ -14,7 +15,6 @@ namespace ConseleUI
                 Console.WriteLine(car.Id +" " + car.Decsription);
             }
 
-           
         }
     }
 }

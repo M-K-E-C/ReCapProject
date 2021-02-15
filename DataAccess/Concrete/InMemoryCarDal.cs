@@ -14,11 +14,11 @@ namespace DataAccess.Concrete
         {
             _cars = new List<Car>
             {
-                new Car {Id =1,ColorId=1,DailyPrice = 100000,ModelYear = 2010,Decsription ="Benzin-Lpg"},
-                new Car {Id =2,ColorId=1,DailyPrice = 120000,ModelYear = 2015,Decsription ="Benzin-Lpg-Otomatik" },
-                new Car { Id = 3, ColorId = 2, DailyPrice = 135000, ModelYear = 2018, Decsription = "Dizel-Manuel"},
-                new Car {Id =4,ColorId=2,DailyPrice = 200000,ModelYear = 2019,Decsription ="Benzin" },
-                new Car {Id =5,ColorId=3,DailyPrice = 155000,ModelYear = 2020,Decsription ="Dizel-otomatik" },
+                new Car {Id =1,ColorId=1,DailyPrice = 100000,ModelYear = 2010,Decsription ="Benzin-Lpg",BrandId =1},
+                new Car {Id =2,ColorId=1,DailyPrice = 120000,ModelYear = 2015,Decsription ="Benzin-Lpg-Otomatik" ,BrandId =2},
+                new Car { Id = 3, ColorId = 2, DailyPrice = 135000, ModelYear = 2018, Decsription = "Dizel-Manuel",BrandId = 3},
+                new Car {Id =4,ColorId=2,DailyPrice = 200000,ModelYear = 2019,Decsription ="Benzin" ,BrandId = 2},
+                new Car {Id =5,ColorId=3,DailyPrice = 155000,ModelYear = 2020,Decsription ="Dizel-otomatik" ,BrandId = 3},
             };
 
         }
