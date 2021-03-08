@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,14 +9,41 @@ namespace Business.Concrete
 {
     public class ColorManager : IColorService
     {
+        IColorDal _colorDal;
+        public ColorManager(IColorDal colorDal)
+        {
+            _colorDal = colorDal;
+        }
         public void Add(Color color)
         {
-            throw new NotImplementedException();
+            if (color.ColorName.Length>=2)
+            {
+                _colorDal.Add(color);
+            }
+            else
+            {
+                Console.WriteLine("Renk ismi en az 2 karakter olmalıdır!");
+            }
+        }
+
+        public void Delete(Color color)
+        {
+            _colorDal.Delete(color);
         }
 
         public List<Color> GetAll()
         {
-            throw new NotImplementedException();
+            return _colorDal.GetAll();
+        }
+
+        public List<Color> GetByColorId(int colorId)
+        {
+            return _colorDal.GetAll(c=> c.ColorId == colorId);
+        }
+
+        public void Update(Color color)
+        {
+            _colorDal.Update(color);
         }
     }
 }
